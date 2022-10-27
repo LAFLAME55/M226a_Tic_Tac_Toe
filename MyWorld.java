@@ -8,7 +8,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-
+    private int mouseclicked; // Überprüft, wie viel Mal die Maus geklickt wurde
+    private Actor Icon; 
+    private boolean playerturn; // Überprüft, welcher Spieler am Zug ist (true=Spieler1/false=Spieler2)
+    private String[][] fielddeclaration = {{"", "", ""},
+                                           {"", "", ""},
+                                           {"", "", ""}};
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -32,5 +37,15 @@ public class MyWorld extends World
             i = i + 1;
         }
     }
+    // 
+    public void act() {
+        Icon.act();
+    }
     
+    // public void setIcon(int getxcoordinate, int getycoordinate) {
+        // if(playerturn && fielddeclaration[getycoordinate][getxcoordinate].equals("")){
+            // addObject(new player1(), getxcoordinate, getycoordinate);
+            
+        // }
+    // }
 }
