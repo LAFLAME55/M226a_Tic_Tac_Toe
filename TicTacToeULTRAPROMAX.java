@@ -57,14 +57,44 @@ public class TicTacToeULTRAPROMAX extends World
     }
 
     public void act() {
+        // Funktion überprüft, ob YE gewonnen hat
         for(int x = 0; x < 3; x++) {
             for(int y = 0; y < 3; y++) {
-                if(getObjectsAt(x, y, ye.class).size() > 0 && getObjectsAt(x + 1, y, ye.class).size() > 0 && getObjectsAt(x + 1, y, ye.class).size() > 0) {
+                if(getObjectsAt(x, y, ye.class).size() > 0 && getObjectsAt(x + 1, y, ye.class).size() > 0 && getObjectsAt(x + 2, y, ye.class).size() > 0) {
                         System.out.println("YE hat gewonnen!");
                         Greenfoot.stop();
                 } 
                 if(getObjectsAt(x, y, ye.class).size() > 0 && getObjectsAt(x, y + 1, ye.class).size() > 0 && getObjectsAt(x, y + 2, ye.class).size() > 0) {
                         System.out.println("YE hat gewonnen!");
+                        Greenfoot.stop();
+                } 
+                if(getObjectsAt(x, y, ye.class).size() > 0 && getObjectsAt(x + 1, y + 1, ye.class).size() > 0 && getObjectsAt(x + 2, y + 2, ye.class).size() > 0) {
+                        System.out.println("YE hat gewonnen!");
+                        Greenfoot.stop();
+                } 
+                if(getObjectsAt(x, y, ye.class).size() > 0 && getObjectsAt(x + 1, y - 1, ye.class).size() > 0 && getObjectsAt(x + 2, y - 2, ye.class).size() > 0) {
+                        System.out.println("YE hat gewonnen!");
+                        Greenfoot.stop();
+                } 
+            }
+        }
+        // Funktion überprüft, ob Skete gewonnen hat
+         for(int x = 0; x < 3; x++) {
+            for(int y = 0; y < 3; y++) {
+                if(getObjectsAt(x, y, skete.class).size() > 0 && getObjectsAt(x + 1, y, skete.class).size() > 0 && getObjectsAt(x + 2, y, skete.class).size() > 0) {
+                        System.out.println("SKETE hat gewonnen!");
+                        Greenfoot.stop();
+                } 
+                if(getObjectsAt(x, y, skete.class).size() > 0 && getObjectsAt(x, y + 1, skete.class).size() > 0 && getObjectsAt(x, y + 2, skete.class).size() > 0) {
+                        System.out.println("SKETE hat gewonnen!");
+                        Greenfoot.stop();
+                } 
+                if(getObjectsAt(x, y, skete.class).size() > 0 && getObjectsAt(x + 1, y + 1, skete.class).size() > 0 && getObjectsAt(x + 2, y + 2, skete.class).size() > 0) {
+                        System.out.println("SKETE hat gewonnen!");
+                        Greenfoot.stop();
+                } 
+                if(getObjectsAt(x, y, skete.class).size() > 0 && getObjectsAt(x + 1, y - 1, skete.class).size() > 0 && getObjectsAt(x + 2, y - 2, skete.class).size() > 0) {
+                        System.out.println("SKETE hat gewonnen!");
                         Greenfoot.stop();
                 } 
             }
