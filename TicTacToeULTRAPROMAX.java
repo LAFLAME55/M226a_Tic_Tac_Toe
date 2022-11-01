@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import javax.swing.*;
 /**
  * Write a description of class MyWorld here.
  * 
@@ -16,11 +16,42 @@ public class TicTacToeULTRAPROMAX extends World
      */
     // Ruft Methoden für das Erstellen des Spielfelds auf. Erstellt eine neue Welt mit 3x3 Feld à 200 px
     public TicTacToeULTRAPROMAX() {    
-        super(3, 3, 200); 
+        super(3, 3, 200);
+        // createInputDialog();
         createFields();
         checkXTurnStatus = true; 
     }
-
+        
+    // Funktion für das öffnen des Popups
+    // public void createInputDialog() {
+        // try {
+            // UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        // }catch (ClassNotFoundException | InstantiationException | IllegalAccessException 
+            // | UnsupportedLookAndFeelException ex) {
+        // }
+        // ImageIcon displayPictureYe = new ImageIcon("/Screenshot 2022-10-29 152222.png"); 
+        
+        // Object[] possibleValues = { 1, 2, 3 };
+        // Object selectedValue = JOptionPane.showInputDialog(null,
+        // "Wähle einen Charakter:", "Input",
+        // JOptionPane.INFORMATION_MESSAGE, displayPictureYe,
+        // possibleValues, possibleValues[0]);
+    // }   
+    
+    // Überprüft, ob die Esc-Taste gedrückt wurde. Falls ja wird das Spiel beendet.
+    public void checkKeyESC() {
+        String escKey = Greenfoot.getKey();
+        if("escape".equals(escKey)) {
+            System.out.println("ESC Taste wurde gedrückt. Beende das Spiel...");
+            setBackground("kanye-face.gif");
+            Greenfoot.stop();
+        }
+    }
+    
+    // public void gameOverByESC(String imageFilename) {
+        // setBackground("kanye-face.gif");
+    // }
+    
     public void createFields() {
         for(int x = 0; x < 3; x++) {
             for(int y = 0; y < 3; y++) {
@@ -39,6 +70,7 @@ public class TicTacToeULTRAPROMAX extends World
 
     public void act() {
         // Funktionsblock überprüft, ob YE gewonnen hat
+        checkKeyESC();
         for(int x = 0; x < 3; x++) {
             for(int y = 0; y < 3; y++) {
                 // Überprüft, ob eine Reihe auf X-Achse voll ist
