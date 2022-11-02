@@ -43,19 +43,15 @@ public class TicTacToeULTRAPROMAX extends World
         String escKey = Greenfoot.getKey();
         if("escape".equals(escKey)) {
             System.out.println("ESC Taste wurde gedrückt. Beende das Spiel...");
-            setBackground("kanye-face.gif");
+            Greenfoot.setWorld(new escscreen());
             Greenfoot.stop();
         }
     }
     
-    // public void gameOverByESC(String imageFilename) {
-        // setBackground("kanye-face.gif");
-    // }
-    
     public void createFields() {
         for(int x = 0; x < 3; x++) {
             for(int y = 0; y < 3; y++) {
-                addObject(new Fields(), x, y);
+                addObject(new fields(), x, y);
             }
         }
     }   
@@ -67,7 +63,22 @@ public class TicTacToeULTRAPROMAX extends World
     public void changeXTurns() {
         checkXTurnStatus = !checkXTurnStatus;
     }
-
+    
+    
+    // Scope wechseln
+    // Funktion für das Ausgeben des Aktors YE. Der Sieg wird geloggt und die Welt resetgame wird aufgerufen
+    public void checkYeWin() {
+        System.out.println("YE hat gewonnen!");
+        Greenfoot.setWorld(new resetgame());
+    }
+    // Scope wechseln
+    // Funktion für das Ausgeben des Aktors YE. Der Sieg wird geloggt und die Welt resetgame wird aufgerufen
+    public void checkSketeWin() {
+        System.out.println("SKETE hat gewonnen!");
+        Greenfoot.setWorld(new resetgame());
+    }
+    
+    
     public void act() {
         // Funktionsblock überprüft, ob YE gewonnen hat
         checkKeyESC();
@@ -75,22 +86,18 @@ public class TicTacToeULTRAPROMAX extends World
             for(int y = 0; y < 3; y++) {
                 // Überprüft, ob eine Reihe auf X-Achse voll ist
                 if(getObjectsAt(x, y, ye.class).size() > 0 && getObjectsAt(x + 1, y, ye.class).size() > 0 && getObjectsAt(x + 2, y, ye.class).size() > 0) {
-                        System.out.println("YE hat gewonnen!");
-                        Greenfoot.stop();
+                    checkYeWin();
                 } 
                 // Überprüft, ob eine Reihe auf Y-Achse voll ist
                 else if(getObjectsAt(x, y, ye.class).size() > 0 && getObjectsAt(x, y + 1, ye.class).size() > 0 && getObjectsAt(x, y + 2, ye.class).size() > 0) {
-                        System.out.println("YE hat gewonnen!");
-                        Greenfoot.stop();
+                    checkYeWin();
                 } 
                 // Überprüft, ob eine Reihe quer (XY-Achse) voll ist
                 else if(getObjectsAt(x, y, ye.class).size() > 0 && getObjectsAt(x + 1, y + 1, ye.class).size() > 0 && getObjectsAt(x + 2, y + 2, ye.class).size() > 0) {
-                        System.out.println("YE hat gewonnen!");
-                        Greenfoot.stop();
+                    checkYeWin();
                 } 
                 else if(getObjectsAt(x, y, ye.class).size() > 0 && getObjectsAt(x + 1, y - 1, ye.class).size() > 0 && getObjectsAt(x + 2, y - 2, ye.class).size() > 0) {
-                        System.out.println("YE hat gewonnen!");
-                        Greenfoot.stop();
+                    checkYeWin();
                 } 
                 // Überprüft, ob alle Felder voll sind (anhand von der ye Klasse)
                 else if(getObjects(ye.class).size() == 5) {
@@ -104,24 +111,18 @@ public class TicTacToeULTRAPROMAX extends World
             for(int y = 0; y < 3; y++) {
                 // Überprüft, ob eine Reihe auf X-Achse voll ist
                 if(getObjectsAt(x, y, skete.class).size() > 0 && getObjectsAt(x + 1, y, skete.class).size() > 0 && getObjectsAt(x + 2, y, skete.class).size() > 0) {
-                        System.out.println("SKETE hat gewonnen!");
-                        Greenfoot.stop();
+                    checkSketeWin();
                 } 
                 // Überprüft, ob eine Reihe auf Y-Achse voll ist
                 else if(getObjectsAt(x, y, skete.class).size() > 0 && getObjectsAt(x, y + 1, skete.class).size() > 0 && getObjectsAt(x, y + 2, skete.class).size() > 0) {
-                        System.out.println("SKETE hat gewonnen!");
-                        mouseclicked++; 
-                        System.out.println(mouseclicked);
-                        Greenfoot.stop();
+                    checkSketeWin();
                 } 
                 // Überprüft, ob eine Reihe quer (XY-Achse) voll ist
                 else if(getObjectsAt(x, y, skete.class).size() > 0 && getObjectsAt(x + 1, y + 1, skete.class).size() > 0 && getObjectsAt(x + 2, y + 2, skete.class).size() > 0) {
-                        System.out.println("SKETE hat gewonnen!");
-                        Greenfoot.stop();
+                    checkSketeWin();
                 } 
                 else if(getObjectsAt(x, y, skete.class).size() > 0 && getObjectsAt(x + 1, y - 1, skete.class).size() > 0 && getObjectsAt(x + 2, y - 2, skete.class).size() > 0) {
-                        System.out.println("SKETE hat gewonnen!");
-                        Greenfoot.stop();
+                    checkSketeWin();
                 } 
                 // Überprüft, ob alle Felder voll sind (anhand von der skete Klasse)
                 else if(getObjects(skete.class).size() == 5) {
