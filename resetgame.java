@@ -20,6 +20,6 @@ public class resetgame extends World
     }
     // Erstellt ein neues Objekt vom Typ resetbutton auf Positon 200px x 200px
     public void act(){
-        addObject(new resetbutton(), 525, 75);
+        addObject(new resetbutton(), 525, 325);
     }
 }
