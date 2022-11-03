@@ -51,7 +51,7 @@ public class TicTacToeULTRAPROMAX extends World
     public void createFields() {
         for(int x = 0; x < 3; x++) {
             for(int y = 0; y < 3; y++) {
-                addObject(new fields(), x, y);
+                addObject(new Fields(), x, y);
             }
         }
     }   
