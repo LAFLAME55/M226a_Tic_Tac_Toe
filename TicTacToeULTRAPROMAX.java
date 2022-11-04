@@ -98,8 +98,8 @@ public class TicTacToeULTRAPROMAX extends World
     // Scope wechseln
     // Funktion für das Ausgeben des Aktors YE. Der Sieg wird geloggt und die Welt resetgame wird aufgerufen
     public void checkForTie() {
-        System.out.println("Untentschieden! Das Spiel wird beendet...");
         Greenfoot.setWorld(new tiescreen());
+        System.out.println("Untentschieden! Das Spiel wird beendet...");
     }
     
     public void act() {
