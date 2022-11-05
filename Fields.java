@@ -11,21 +11,9 @@ public class Fields extends Actor
     /**
      * Act - do whatever the Icon wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-// public void setLines() {
-        // GreenfootImage backgroundimage = getBackground();
-        // int i = 1;
-        // while (i < 3) {            
-            // backgroundimage.setColor(Color.BLACK);
-            // backgroundimage.drawLine(i*200, 0, i*200, 600);
-            // backgroundimage.drawLine(0, i*200, 600, i*200);
-            // i = i + 1;
-        // }
-    // }    
+     */ 
 
 public void act() {
-        // int getxcoordinate = Greenfoot.getMouseInfo().getX();
-        // int getycoordinate = Greenfoot.getMouseInfo().getY();
         if(Greenfoot.mouseClicked(this)) {
             TicTacToeULTRAPROMAX game = getWorldOfType(TicTacToeULTRAPROMAX.class);
             if (game.isXTurn()) {
@@ -35,8 +23,6 @@ public void act() {
                 game.addObject(new skete(), getX(), getY());
                 game.changeXTurns();
             }
-            // Maybe hier ende vom spiel falls 9 felder voll sind
-            // mouseclicked = mouseclicked + 1;
         }
     }
 }

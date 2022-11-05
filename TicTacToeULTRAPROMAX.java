@@ -11,6 +11,12 @@ public class TicTacToeULTRAPROMAX extends World
     private int mouseclicked; // Überprüft, wie viel Mal die Maus geklickt wurde
     private boolean checkXTurnStatus;
     private int score;
+    public boolean isWin; 
+    public int yeWinCount; 
+    public int sketeWinCount;
+    // private Actor yeCounter = new counter();
+    // private Actor sketeCounter = new counter();
+
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -24,20 +30,33 @@ public class TicTacToeULTRAPROMAX extends World
         checkXTurnStatus = true; 
     }
         
-    public void addScore(int points)
+    public void addScore(int points, Object electWinner)
     {
         score = score + points;
-        showScore();
-        if (score < 0) 
-        {
-            Greenfoot.stop();
+        if(electWinner == ye.class) {
+            yeWinCount++;
+        } else if (electWinner == skete.class) {
+            sketeWinCount++;
         }
+        // showScore();
     }
     
-    private void showScore()
-    {
-        showText("Score: " + score, 80, 25);
+    public int getYeScore() {
+        return yeWinCount;
     }
+    
+        public int getSketeScore() {
+        return sketeWinCount;
+    }
+    // private void showScore()
+    // {
+        // addObject(yeCounter, 75, 125);
+        // addObject(sketeCounter, 225, 125);
+        // yeCounter.setImage(new GreenfootImage("Score: "+yeWinCount, 24, null, null));
+        // sketeCounter.setImage(new GreenfootImage("Score: "+sketeWinCount, 24, null, null));
+        // // showText("Score: " + score, 80, 25);
+        // // showText("Score: " + score, 80, 25);
+    // }
     
     // Funktion für das öffnen des Popups
     // public void createInputDialog() {
@@ -86,14 +105,17 @@ public class TicTacToeULTRAPROMAX extends World
     // Funktion für das Ausgeben des Aktors YE. Der Sieg wird geloggt und die Welt resetgame wird aufgerufen
     public void checkYeWin() {
         System.out.println("YE hat gewonnen!");
+        isWin = true;         
+        addScore(1, ye.class);
         // TicTacToeULTRAPROMAX.addScore(+1); 
-        Greenfoot.setWorld(new resetgame());
+        Greenfoot.setWorld(new winscreen());
     }
     // Scope wechseln
     // Funktion für das Ausgeben des Aktors YE. Der Sieg wird geloggt und die Welt resetgame wird aufgerufen
     public void checkSketeWin() {
         System.out.println("SKETE hat gewonnen!");
-        Greenfoot.setWorld(new resetgame());
+        addScore(1, skete.class);
+        Greenfoot.setWorld(new winscreen());
     }
     // Scope wechseln
     // Funktion für das Ausgeben des Aktors YE. Der Sieg wird geloggt und die Welt resetgame wird aufgerufen
@@ -148,8 +170,7 @@ public class TicTacToeULTRAPROMAX extends World
                 } 
                 // Überprüft, ob alle Felder voll sind (anhand von der skete Klasse)
                 else if(getObjects(skete.class).size() == 5) {
-                        System.out.println("Untentschieden! Das Spiel wird beendet...");
-                        Greenfoot.stop();
+                    checkForTie();
                 } 
             }
         }

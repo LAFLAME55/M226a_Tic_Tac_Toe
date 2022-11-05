@@ -14,6 +14,8 @@ public class ye extends Actor
      */
     public void act()
     {
-        
+        // ((TicTacToeULTRAPROMAX)getWorld()).checkYeWin();
+        // ((TicTacToeULTRAPROMAX)getWorld()).addScore(+1);
+        // isWin() = true; T
     }
 }
