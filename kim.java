@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class kim here.
+ * Dies ist der Aktor der Klasse Kim. Diesen Aktor haben wir noch nicht in Benutzung. 
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Serkan Tugra & Julian Schmid
+ * @Version : 1.0.0 
  */
 public class kim extends Actor
 {

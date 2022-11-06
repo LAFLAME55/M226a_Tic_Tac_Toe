@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class skete here.
+ * Dieser Aktor ist in unserem Spiel ein spielbarer Charakter. Das platzieren übernimmt die Klasse Fields.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Serkan Tugra & Julian Schmid
+ * @Version : 1.0.0 
  */
 public class skete extends Actor
 {

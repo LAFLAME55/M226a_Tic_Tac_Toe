@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class resetgame here.
+ * Diese Welt wird angezeigt, sobald ein Sieger ermittelt wurde. Zudem kann man in dieser Welt ein Spiel nochmals neustarten indem man auf den Button reset drückt (in act() Methode).
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Serkan Tugra & Julian Schmid
+ * @Version : 1.0.0 
  */
 public class winscreen extends World
 {
@@ -23,21 +23,22 @@ public class winscreen extends World
     // Erstellt ein neues Objekt vom Typ resetbutton auf Positon 200px x 200px
     public void act(){
         addObject(new resetbutton(), 525, 325);
-        
         // addObject(new Counter(), 75, 25);
         // addObject(new Counter(), 525, 25);
     }
-       private void showScore()
-    {
-        addObject(yeCounter, 75, 125);
-        addObject(sketeCounter, 225, 125);
-        // ((TicTacToeULTRAPROMAX)getWorld()).getYeScore();
-        // yeScore = TicTacToeULTRAPROMAX.getYeScore();
-        // TicTacToeULTRAPROMAX world = (TicTacToeULTRAPROMAX) getWorld();
+    
+    // Diese Funktion dient für die Anzeige des Score Counters. Diese Funktion funktioniert noch nicht, deswegen ist alles auskommentiert
+    // private void showScore()
+    // {
+        // addObject(yeCounter, 75, 125);
+        // addObject(sketeCounter, 225, 125);
+        // // ((TicTacToeULTRAPROMAX)getWorld()).getYeScore();
+        // // yeScore = TicTacToeULTRAPROMAX.getYeScore();
+        // // TicTacToeULTRAPROMAX world = (TicTacToeULTRAPROMAX) getWorld();
         
-        // yeCounter.setImage(new GreenfootImage("Score: "+world.getYeScore(), 24, null, null));
-        // sketeCounter.setImage(new GreenfootImage("Score: "+world.getSketeScore(), 24, null, null));
-        // showText("Score: " + score, 80, 25);
-        // showText("Score: " + score, 80, 25);
-    }
+        // // yeCounter.setImage(new GreenfootImage("Score: "+world.getYeScore(), 24, null, null));
+        // // sketeCounter.setImage(new GreenfootImage("Score: "+world.getSketeScore(), 24, null, null));
+        // // showText("Score: " + score, 80, 25);
+        // // showText("Score: " + score, 80, 25);
+    // }
 }

@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class ye here.
+ * Dies ist die Aktoren Klasse ye. Dies ist wie die skete Klasse ein spielbarer Charackter.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Serkan Tugra & Julian Schmid
+ * @Version : 1.0.0 
  */
 public class ye extends Actor
 {
@@ -12,6 +12,7 @@ public class ye extends Actor
      * Act - do whatever the ye wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    // Die Funktionen in der Act Methoden funktionieren noch nicht
     public void act()
     {
         // ((TicTacToeULTRAPROMAX)getWorld()).checkYeWin();

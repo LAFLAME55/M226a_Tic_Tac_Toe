@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=escscreen
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ escscreen\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Das\ ist\ der\ Endscreen.\ Falls\ man\ die\ ESC\ Taste\ gedr\u00FCckt\ hat,\ so\ wird\ das\ Spiel\ beendet.\ Diese\ Welt\ besteht\ nur\ aus\ einem\ Bild.\ \r\n\ \r\n\ @Serkan\ Tugra\ &\ Julian\ Schmid\r\n\ @Version\ \:\ 1.0.0\ \r\n
 comment1.params=
 comment1.target=escscreen()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ escscreen.\r\n\ \r\n
