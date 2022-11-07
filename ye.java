@@ -3,6 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Dies ist die Aktoren Klasse ye. Dies ist wie die skete Klasse ein spielbarer Charackter.
  * 
+ * Der auskommentierte Code funktioniert zum jetzigen Zeitpunkt noch nicht. Dennoch haben wir ihn drin gelassen, sodass man nachvollziehen was wir versucht haben. 
+ * 
  * @Serkan Tugra & Julian Schmid
  * @Version : 1.0.0 
  */

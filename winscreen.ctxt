@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=winscreen
-comment0.text=\r\n\ Diese\ Welt\ wird\ angezeigt,\ sobald\ ein\ Sieger\ ermittelt\ wurde.\ Zudem\ kann\ man\ in\ dieser\ Welt\ ein\ Spiel\ nochmals\ neustarten\ indem\ man\ auf\ den\ Button\ reset\ dr\u00FCckt\ (in\ act()\ Methode).\r\n\ \r\n\ @Serkan\ Tugra\ &\ Julian\ Schmid\r\n\ @Version\ \:\ 1.0.0\ \r\n
+comment0.text=\r\n\ Diese\ Welt\ wird\ angezeigt,\ sobald\ ein\ Sieger\ ermittelt\ wurde.\ Zudem\ kann\ man\ in\ dieser\ Welt\ ein\ Spiel\ nochmals\ neustarten\ indem\ man\ auf\ den\ Button\ reset\ dr\u00FCckt\ (in\ act()\ Methode).\r\n\ \r\n\ Der\ auskommentierte\ Code\ funktioniert\ zum\ jetzigen\ Zeitpunkt\ noch\ nicht.\ Dennoch\ haben\ wir\ ihn\ drin\ gelassen,\ sodass\ man\ nachvollziehen\ was\ wir\ versucht\ haben.\ \r\n\ \r\n\ @Serkan\ Tugra\ &\ Julian\ Schmid\r\n\ @Version\ \:\ 1.0.0\ \r\n
 comment1.params=
 comment1.target=winscreen()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ resetgame.\r\n\ \r\n

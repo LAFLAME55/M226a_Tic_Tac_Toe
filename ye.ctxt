@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=ye
-comment0.text=\r\n\ Dies\ ist\ die\ Aktoren\ Klasse\ ye.\ Dies\ ist\ wie\ die\ skete\ Klasse\ ein\ spielbarer\ Charackter.\r\n\ \r\n\ @Serkan\ Tugra\ &\ Julian\ Schmid\r\n\ @Version\ \:\ 1.0.0\ \r\n
+comment0.text=\r\n\ Dies\ ist\ die\ Aktoren\ Klasse\ ye.\ Dies\ ist\ wie\ die\ skete\ Klasse\ ein\ spielbarer\ Charackter.\r\n\ \r\n\ Der\ auskommentierte\ Code\ funktioniert\ zum\ jetzigen\ Zeitpunkt\ noch\ nicht.\ Dennoch\ haben\ wir\ ihn\ drin\ gelassen,\ sodass\ man\ nachvollziehen\ was\ wir\ versucht\ haben.\ \r\n\ \r\n\ @Serkan\ Tugra\ &\ Julian\ Schmid\r\n\ @Version\ \:\ 1.0.0\ \r\n
 comment1.params=
 comment1.target=void\ act()
 comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ ye\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n

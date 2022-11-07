@@ -4,6 +4,8 @@ import javax.swing.*; // JoptionPain (Popup window)
  * Dies ist die Hauptwelt. Darin sind verschiedene Funktionen enthalten, welche die Erstellung der Welt, das hohlen, wechseln und setzen von Aktoren, das herauslesen eines Gewinners und die Switches
  * zu anderen Welten abhandelt. Man kann sich die Kreuze (X) und Kreise (O) im Traditionellem Tic Tac Toe bei uns mit den Klassen ye (X) und skete (o) vergleichen. 
  * 
+ * Der auskommentierte Code funktioniert zum jetzigen Zeitpunkt noch nicht. Dennoch haben wir ihn drin gelassen, sodass man nachvollziehen was wir versucht haben. 
+ * 
  * @Serkan Tugra & Julian Schmid
  * @Version : 1.0.0 
  */
@@ -33,7 +35,6 @@ public class TicTacToeULTRAPROMAX extends World
     // Funktion fügt Punkte zur korrekten Spielerklasse hinzu. Die Funktion behinhaltet 2 Parameter (Anz. Punkte und Siegerklasse)
     public void addScore(int points, Object electWinner)
     {
-        
         score = score + points;
         if(electWinner == ye.class) {
             yeWinCount++;
